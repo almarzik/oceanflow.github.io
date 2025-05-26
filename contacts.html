@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>OCEANFLOW| Services</title>
+</head>
+<body>
+    <div class="modal" id="contacts-modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <div class="contacts__content">
+                <form action="#" class="contacts__form contacts__form--modal">
+                    <button type="button" class="modal__close" aria-label="Закрыть">
+                        <img class="modal__icon" src="img/plus.png" alt="review5">
+                      </button>
+                    <h2 class="contacts__title contacts__title--modal">
+                      ИДЁМ <span>СЁРФИТЬ</span>
+                     </h2>
+                    <input type="text" placeholder="Как вас зовут?">
+                    <input type="email" placeholder="Электронная почта">
+                    <input type="tel" placeholder="Номер телефона">
+                    <a href="#" class="btn contacts__btn ">Хочу сёрфить</a>
+                    <p class="contacts__note">
+                      *нажимая на кнопку, вы соглашаетесь с условиями положения по обработке данныx и публичной оферты
+                    </p>
+                </form>
+            </div>
+        </div>
+      </div>
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="page-header">
+                <a href="main.html" class="logo_link"><img  src="img/logo.png" alt="logo" class="logo"></a>
+                <ul class="main-menu">
+                    <li class="main-menu__item"><a href="team.html" class="main-menu__link">Команда</a></li>
+                    <li class="main-menu__item"><a href="services.html" class="main-menu__link">Услуги</a></li>
+                    <li class="main-menu__item"><a href="contacts.html" class="main-menu__link">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+      <div class="container">
+            <div class="map__data">
+              <h3 class="map__title">
+                Как с нами связаться
+              </h3>
+              <div class="map__info">
+                <div class="info__tel">
+                  <img src="img/contact/Phone.png" alt="">
+                  <p class="map__tel">What's App/Telegram +7 900 000 00 00 Шри-Ланка +90 00 000 0000</p>
+                </div>
+                <div class="info__tel">
+                  <img src="img/contact/Pin.png" alt="">
+                  <p class="map__tel">No 429 New Galle Road, Pelena, Велигама, 81700, Шри-Ланка</p>
+                </div>
+            </div>
+          <div id="map" class="map__interactive"></div>
+      </div>
+    </section>
+
+    <section class="contacts contact_page">
+      <div class="container">
+        <h2 class="contacts__title">
+          ИДЁМ <span>СЁРФИТЬ</span>
+        </h2>
+        <h3 class="contacts__subtitle">
+          Оставьте контакты, и мы свяжемся с вами в течение 12 часов
+        </h3>
+        <div class="contacts__content">
+          <form action="#" class="contacts__form">
+
+            <input type="text" placeholder="Как вас зовут?">
+            <input type="email" placeholder="Электронная почта">
+            <input type="tel" placeholder="Номер телефона">
+            <a href="#" class="btn contacts__btn ">Хочу сёрфить</a>
+            <p class="contacts__note">
+              *нажимая на кнопку, вы соглашаетесь с условиями положения по обработке данныx и публичной оферты
+            </p>
+          </form>
+          <img src="img/contact_pic.jpg" alt="contact_pic" class="contacts__image">
+        </div>
+      </div>
+    </section>
+
+   
+
+    <div class="footer">
+        <div class="container">
+          <div class="footer__top">
+            <a href="main.html" class="logo_link"><img  src="img/logo_big.png" alt="logo" class="logo footer__logo"></a>
+            <div class="footer__info">
+              <div class="footer__socials">
+                <img src="img/inst.png" alt="inst">
+                <img src="img/tg.png" alt="tg">
+              </div>
+              <p class="footer__text">
+                *деятельность Инстаграм запрещена на территории Российской Федерации
+              </p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__legal">
+            Публичная оферта Политика конфиденциальнсоти
+          </p>
+          <ul class="main-menu">
+            <li class="main-menu__item"><a href="team.html" class="main-menu__link">Команда</a></li>
+            <li class="main-menu__item"><a href="services.html" class="main-menu__link">Услуги</a></li>
+            <li class="main-menu__item"><a href="contacts.html" class="main-menu__link">Контакты</a></li>
+        </ul>
+        </div>
+        </div>
+    </div>
+
+    
+
+<script src="js/js.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map("map", {
+          center: [5.975710, 80.429671], // координаты центра Москвы
+          zoom: 15,
+          controls: [], // отключаем все элементы управления
+         
+        }, {
+            suppressMapOpenBlock: true // убираем ссылку "Открыть в Яндекс.Картах"
+        }),
+  
+        myPlacemark = new ymaps.Placemark([5.975710, 80.429671], {
+          hintContent: 'Мы здесь',
+          balloonContent: 'Москва, ул. Арбат, д. 1'
+        });
+  
+        var myPlacemark = new ymaps.Placemark([5.975710, 80.429671], {}, {
+      preset: 'islands#nightDotIcon' // тёмная (ночная) метка
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+    });
+  </script>
+</body>
+</html>
